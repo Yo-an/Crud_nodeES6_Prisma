@@ -12,6 +12,4 @@ model Users {
   username  String   @db.VarChar(255)
   email     String   @db.VarChar(255)
   password  String   @db.VarChar(255)
-  CreatedAt DateTime @db.DateTime(0)
-  UpdatedAt DateTime @db.DateTime(0)
 }
