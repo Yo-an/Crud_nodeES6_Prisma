@@ -17,6 +17,10 @@ var _index = _interopRequireDefault(require("./routes/index"));
 
 var _users = _interopRequireDefault(require("./routes/users"));
 
+var _swaggerUiExpress = _interopRequireDefault(require("swagger-ui-express"));
+
+var _swagger = _interopRequireDefault(require("../swagger.json"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var app = (0, _express["default"])();
@@ -29,5 +33,6 @@ app.use((0, _cookieParser["default"])());
 app.use(_express["default"]["static"](_path["default"].join(__dirname, '../public')));
 app.use('/', _index["default"]);
 app.use('/users', _users["default"]);
+app.use('/api-docs', _swaggerUiExpress["default"].serve, _swaggerUiExpress["default"].setup(_swagger["default"]));
 var _default = app;
 exports["default"] = _default;
