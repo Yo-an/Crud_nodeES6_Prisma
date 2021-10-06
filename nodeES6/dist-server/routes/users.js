@@ -13,7 +13,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 var prisma = new _client.PrismaClient();
 var _default = {
-  getUserProfile: function getUserProfile(req, res) {
+  getUsers: function getUsers(req, res) {
     function main() {
       return _main.apply(this, arguments);
     }
@@ -117,6 +117,122 @@ var _default = {
           }
         }
       }, _callee3);
+    })));
+  },
+  putUser: function putUser(req, res) {
+    //params
+    var id = req.body.id;
+    var username = req.body.username;
+    var password = req.body.password;
+    var email = req.body.email;
+
+    function main() {
+      return _main3.apply(this, arguments);
+    }
+
+    function _main3() {
+      _main3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee6() {
+        var updateUser;
+        return regeneratorRuntime.wrap(function _callee6$(_context6) {
+          while (1) {
+            switch (_context6.prev = _context6.next) {
+              case 0:
+                _context6.next = 2;
+                return prisma.users.update({
+                  where: {
+                    id: Number(id)
+                  },
+                  data: {
+                    username: username,
+                    email: email,
+                    password: password
+                  }
+                });
+
+              case 2:
+                updateUser = _context6.sent;
+                res.status(201).json(updateUser);
+
+              case 4:
+              case "end":
+                return _context6.stop();
+            }
+          }
+        }, _callee6);
+      }));
+      return _main3.apply(this, arguments);
+    }
+
+    main()["catch"](function (e) {
+      throw e;
+    })["finally"]( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
+      return regeneratorRuntime.wrap(function _callee5$(_context5) {
+        while (1) {
+          switch (_context5.prev = _context5.next) {
+            case 0:
+              _context5.next = 2;
+              return prisma.$disconnect();
+
+            case 2:
+            case "end":
+              return _context5.stop();
+          }
+        }
+      }, _callee5);
+    })));
+  },
+  deleteUser: function deleteUser(req, res) {
+    //params
+    var id = req.body.id;
+
+    function main() {
+      return _main4.apply(this, arguments);
+    }
+
+    function _main4() {
+      _main4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
+        var deleteUser;
+        return regeneratorRuntime.wrap(function _callee8$(_context8) {
+          while (1) {
+            switch (_context8.prev = _context8.next) {
+              case 0:
+                _context8.next = 2;
+                return prisma.users["delete"]({
+                  where: {
+                    id: Number(id)
+                  }
+                });
+
+              case 2:
+                deleteUser = _context8.sent;
+                res.status(201).json('bien effacer');
+
+              case 4:
+              case "end":
+                return _context8.stop();
+            }
+          }
+        }, _callee8);
+      }));
+      return _main4.apply(this, arguments);
+    }
+
+    main()["catch"](function (e) {
+      throw e;
+    })["finally"]( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee7() {
+      return regeneratorRuntime.wrap(function _callee7$(_context7) {
+        while (1) {
+          switch (_context7.prev = _context7.next) {
+            case 0:
+              _context7.next = 2;
+              return prisma.$disconnect();
+
+            case 2:
+            case "end":
+              return _context7.stop();
+          }
+        }
+      }, _callee7);
     })));
   }
 };

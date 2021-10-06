@@ -6,8 +6,10 @@ import users from './routes/users';
 var apiRouter = express.Router();
 
 //User routes
-apiRouter.route('/user/me/').get(users.getUserProfile);
+apiRouter.route('/user/me/').get(users.getUsers);
 apiRouter.route('/user/post/').post(users.addUser);
+apiRouter.route('/user/put/').put(users.putUser);
+apiRouter.route('/user/delete/').delete(users.deleteUser);
 
 
 export default apiRouter;
