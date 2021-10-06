@@ -16,7 +16,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var apiRouter = _express["default"].Router(); //User routes
 
 
-apiRouter.route('/user/me/').get(_users["default"].getUsers);
+apiRouter.route('/user/list/').get(_users["default"].getUsers);
 apiRouter.route('/user/post/').post(_users["default"].addUser);
 apiRouter.route('/user/put/').put(_users["default"].putUser);
 apiRouter.route('/user/delete/')["delete"](_users["default"].deleteUser);

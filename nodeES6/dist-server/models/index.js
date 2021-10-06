@@ -29,13 +29,23 @@ function _main() {
         switch (_context2.prev = _context2.next) {
           case 0:
             _context2.next = 2;
-            return prisma.users.findMany();
+            return prisma.users.create({
+              data: {
+                username: 'Alice',
+                email: 'alice@prisma.io',
+                password: 'uzerty'
+              }
+            });
 
           case 2:
+            _context2.next = 4;
+            return prisma.users.findMany();
+
+          case 4:
             allUsers = _context2.sent;
             console.log(allUsers);
 
-          case 4:
+          case 6:
           case "end":
             return _context2.stop();
         }

@@ -22,12 +22,12 @@ export default{
   addUser: (req, res)=>{
 
     //Params
-    var username = req.body.username;
-    var password = req.body.password;
-    var email    = req.body.email;
+    const username = req.body.username;
+    const password = req.body.password;
+    const email    = req.body.email;
 
     async function main(){
-      var newUser = await prisma.users.create({
+      const newUser = await prisma.users.create({
         data: {
           username: username,
           email: email,
@@ -47,10 +47,10 @@ export default{
   putUser:(req, res)=>{
     
     //params
-    var id=req.body.id;
-    var username = req.body.username;
-    var password = req.body.password;
-    var email    = req.body.email;
+    const id       = req.body.id;
+    const username = req.body.username;
+    const password = req.body.password;
+    const email    = req.body.email;
 
     async function main(){     
       const updateUser= await prisma.users.update({
@@ -74,10 +74,10 @@ export default{
   deleteUser:(req,res)=>{
 
     //params
-    var id=req.body.id;
+    const id = req.body.id;
 
     async function main(){ 
-      const deleteUser= await prisma.users.delete({
+      await prisma.users.delete({
         where:{ id:Number(id)},
       });
       res.status(201).json('bien effacer');

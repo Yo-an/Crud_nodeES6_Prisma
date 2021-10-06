@@ -191,7 +191,6 @@ var _default = {
 
     function _main4() {
       _main4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
-        var deleteUser;
         return regeneratorRuntime.wrap(function _callee8$(_context8) {
           while (1) {
             switch (_context8.prev = _context8.next) {
@@ -204,10 +203,9 @@ var _default = {
                 });
 
               case 2:
-                deleteUser = _context8.sent;
                 res.status(201).json('bien effacer');
 
-              case 4:
+              case 3:
               case "end":
                 return _context8.stop();
             }
