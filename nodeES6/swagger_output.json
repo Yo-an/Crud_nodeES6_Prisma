@@ -16,8 +16,10 @@
   "paths": {
     "/api/user/list/": {
       "get": {
-        "tags": [],
-        "description": "",
+        "tags": [
+          "User"
+        ],
+        "description": "Endpoint to sign in a specific user",
         "parameters": [],
         "responses": {
           "201": {
@@ -28,8 +30,10 @@
     },
     "/api/user/post/": {
       "post": {
-        "tags": [],
-        "description": "",
+        "tags": [
+          "User"
+        ],
+        "description": "Endpoint to sign in a specific user",
         "parameters": [
           {
             "name": "obj",
@@ -59,8 +63,10 @@
     },
     "/api/user/put/": {
       "put": {
-        "tags": [],
-        "description": "",
+        "tags": [
+          "User"
+        ],
+        "description": "Endpoint to sign in a specific user",
         "parameters": [
           {
             "name": "obj",
@@ -93,8 +99,10 @@
     },
     "/api/user/delete/": {
       "delete": {
-        "tags": [],
-        "description": "",
+        "tags": [
+          "User"
+        ],
+        "description": "Endpoint to sign in a specific user",
         "parameters": [
           {
             "name": "obj",
