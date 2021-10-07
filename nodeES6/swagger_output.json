@@ -19,8 +19,35 @@
         "tags": [
           "User"
         ],
-        "description": "Endpoint to list in a specific user",
+        "description": "Endpoint to list in user",
         "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/api/user/get/": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "description": "Endpoint to select one in user",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "201": {
             "description": "Created"
@@ -33,7 +60,7 @@
         "tags": [
           "User"
         ],
-        "description": "Endpoint to add in a specific user",
+        "description": "Endpoint to add in user",
         "parameters": [
           {
             "name": "obj",

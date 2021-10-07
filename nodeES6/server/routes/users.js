@@ -3,9 +3,10 @@ const prisma = new PrismaClient();
 
 export default{
 
-  getUsers: (req, res)=> {
+  getListUsers: (req, res)=> {
     /* 	#swagger.tags = ['User']
-        #swagger.description = 'Endpoint to list in a specific user' */
+        #swagger.description = 'Endpoint to list in user' */
+
     async function main() {      
       const allUsers = await prisma.users.findMany();
       console.log(allUsers);
@@ -20,9 +21,35 @@ export default{
       })
   },
 
+  getUser:(req,res)=>{
+    /*#swagger.tags = ['User']
+        #swagger.description = 'Endpoint to select one in user'*/
+
+    //Params
+    const id = req.body.id;
+
+    async function main() {      
+      const User = await prisma.users.findUnique({
+        where:{
+          id:Number(id),
+        }
+      });
+      console.log(User);
+      res.status(201).json(User);
+    }  
+    main()
+      .catch((e) => {
+        throw e
+      })
+      .finally(async () => {
+        await prisma.$disconnect()
+      })
+  },
+
   addUser: (req, res)=>{
     /* 	#swagger.tags = ['User']
-        #swagger.description = 'Endpoint to add in a specific user' */
+        #swagger.description = 'Endpoint to add in user' */
+
     //Params
     const username = req.body.username;
     const password = req.body.password;
@@ -35,7 +62,7 @@ export default{
           email: email,
           password:password,
         },
-      });
+      })
       res.status(201).json(newUser);
     }
     main()
@@ -46,9 +73,11 @@ export default{
         await prisma.$disconnect()
       })
   },
+
   putUser:(req, res)=>{
     /* 	#swagger.tags = ['User']
         #swagger.description = 'Endpoint to update in a specific user' */
+
     //params
     const id       = req.body.id;
     const username = req.body.username;
@@ -74,9 +103,11 @@ export default{
         await prisma.$disconnect()
       })
   },
+
   deleteUser:(req,res)=>{
     /* 	#swagger.tags = ['User']
         #swagger.description = 'Endpoint to delete in a specific user' */
+        
     //params
     const id = req.body.id;
 
