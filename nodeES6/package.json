@@ -12,7 +12,7 @@
     "watch:dev": "nodemon",
     "test": "jest",
     "build": "npm-run-all clean transpile",
-    "start-gendoc": "node ./server/swagger.mjs"
+    "start-gendoc": "node ./dist-server/swagger.js"
   },
   "dependencies": {
     "@babel/cli": "^7.15.7",
@@ -20,6 +20,7 @@
     "@babel/preset-env": "^7.15.6",
     "@prisma/client": "^3.2.0",
     "cookie-parser": "~1.4.4",
+    "core-js": "^3.18.2",
     "debug": "~2.6.9",
     "express": "^4.17.1",
     "mariadb": "^2.5.4",
@@ -31,7 +32,18 @@
   },
   "babel": {
     "presets": [
-      "@babel/preset-env"
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "browsers": [
+              "last 2 chrome versions"
+            ]
+          },
+          "useBuiltIns": "usage",
+          "corejs":"3"
+        }
+      ]
     ]
   },
   "nodemonConfig": {

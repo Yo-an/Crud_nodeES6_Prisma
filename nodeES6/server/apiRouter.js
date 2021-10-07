@@ -3,7 +3,7 @@ import express from 'express';
 import users from './routes/users';
 
 //Router
-const apiRouter = express.Router();
+var apiRouter = express.Router();
 
 //User routes
 apiRouter.route('/user/list/').get(users.getUsers);
