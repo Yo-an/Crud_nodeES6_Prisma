@@ -21,8 +21,6 @@ var _apiRouter = _interopRequireDefault(require("./apiRouter"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-// import indexRouter from './routes/index';
-// import swaggerDocument from '../swagger.json';
 var app = (0, _express["default"])();
 app.use((0, _morgan["default"])('dev'));
 app.use(_express["default"].json());
@@ -30,8 +28,7 @@ app.use(_express["default"].urlencoded({
   extended: false
 }));
 app.use((0, _cookieParser["default"])());
-app.use(_express["default"]["static"](_path["default"].join(__dirname, '../public'))); // app.use('/', indexRouter);
-
+app.use(_express["default"]["static"](_path["default"].join(__dirname, '../public')));
 app.use('/api', _apiRouter["default"]);
 app.use('/doc', _swaggerUiExpress["default"].serve, _swaggerUiExpress["default"].setup(_swagger_output["default"]));
 var _default = app;
