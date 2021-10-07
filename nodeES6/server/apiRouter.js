@@ -11,5 +11,4 @@ apiRouter.route('/user/post/').post(users.addUser);
 apiRouter.route('/user/put/').put(users.putUser);
 apiRouter.route('/user/delete/').delete(users.deleteUser);
 
-
 export default apiRouter;

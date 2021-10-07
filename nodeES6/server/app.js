@@ -7,6 +7,7 @@ import swaggerFile from '../swagger_output.json';
 import apiRouter from './apiRouter';
 
 var app = express();
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
