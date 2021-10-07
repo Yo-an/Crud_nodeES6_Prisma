@@ -5,7 +5,7 @@ export default{
 
   getUsers: (req, res)=> {
     /* 	#swagger.tags = ['User']
-        #swagger.description = 'Endpoint to sign in a specific user' */
+        #swagger.description = 'Endpoint to list in a specific user' */
     async function main() {      
       const allUsers = await prisma.users.findMany();
       console.log(allUsers);
@@ -22,7 +22,7 @@ export default{
 
   addUser: (req, res)=>{
     /* 	#swagger.tags = ['User']
-        #swagger.description = 'Endpoint to sign in a specific user' */
+        #swagger.description = 'Endpoint to add in a specific user' */
     //Params
     const username = req.body.username;
     const password = req.body.password;
@@ -48,7 +48,7 @@ export default{
   },
   putUser:(req, res)=>{
     /* 	#swagger.tags = ['User']
-        #swagger.description = 'Endpoint to sign in a specific user' */
+        #swagger.description = 'Endpoint to update in a specific user' */
     //params
     const id       = req.body.id;
     const username = req.body.username;
@@ -76,7 +76,7 @@ export default{
   },
   deleteUser:(req,res)=>{
     /* 	#swagger.tags = ['User']
-        #swagger.description = 'Endpoint to sign in a specific user' */
+        #swagger.description = 'Endpoint to delete in a specific user' */
     //params
     const id = req.body.id;
 
