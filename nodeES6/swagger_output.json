@@ -19,7 +19,7 @@
         "tags": [
           "User"
         ],
-        "description": "Endpoint to sign in a specific user",
+        "description": "Endpoint to list in a specific user",
         "parameters": [],
         "responses": {
           "201": {
@@ -33,7 +33,7 @@
         "tags": [
           "User"
         ],
-        "description": "Endpoint to sign in a specific user",
+        "description": "Endpoint to add in a specific user",
         "parameters": [
           {
             "name": "obj",
@@ -66,7 +66,7 @@
         "tags": [
           "User"
         ],
-        "description": "Endpoint to sign in a specific user",
+        "description": "Endpoint to update in a specific user",
         "parameters": [
           {
             "name": "obj",
@@ -102,7 +102,7 @@
         "tags": [
           "User"
         ],
-        "description": "Endpoint to sign in a specific user",
+        "description": "Endpoint to delete in a specific user",
         "parameters": [
           {
             "name": "obj",

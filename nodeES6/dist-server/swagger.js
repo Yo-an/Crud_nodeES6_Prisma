@@ -23,7 +23,7 @@ var doc = {
   schemes: ['http']
 };
 var outputFile = './swagger_output.json';
-var endpointsFiles = ['./server/app.js'];
+var endpointsFiles = ['./server/app.mjs'];
 (0, _swaggerAutogen["default"])()(outputFile, endpointsFiles, doc).then( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
   return regeneratorRuntime.wrap(function _callee$(_context) {
     while (1) {
@@ -31,7 +31,7 @@ var endpointsFiles = ['./server/app.js'];
         case 0:
           _context.next = 2;
           return Promise.resolve().then(function () {
-            return _interopRequireWildcard(require('./app.js'));
+            return _interopRequireWildcard(require('./app.mjs'));
           });
 
         case 2:

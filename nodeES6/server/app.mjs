@@ -4,7 +4,7 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import swaggerUi from 'swagger-ui-express';
 import swaggerFile from '../swagger_output.json';
-import apiRouter from './apiRouter';
+import apiRouter from './apiRouter.js';
 
 
 const app = express();

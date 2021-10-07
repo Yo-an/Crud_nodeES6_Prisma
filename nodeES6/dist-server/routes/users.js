@@ -15,7 +15,7 @@ var prisma = new _client.PrismaClient();
 var _default = {
   getUsers: function getUsers(req, res) {
     /* 	#swagger.tags = ['User']
-        #swagger.description = 'Endpoint to sign in a specific user' */
+        #swagger.description = 'Endpoint to list in a specific user' */
     function main() {
       return _main.apply(this, arguments);
     }
@@ -65,7 +65,7 @@ var _default = {
   },
   addUser: function addUser(req, res) {
     /* 	#swagger.tags = ['User']
-        #swagger.description = 'Endpoint to sign in a specific user' */
+        #swagger.description = 'Endpoint to add in a specific user' */
     //Params
     var username = req.body.username;
     var password = req.body.password;
@@ -125,7 +125,7 @@ var _default = {
   },
   putUser: function putUser(req, res) {
     /* 	#swagger.tags = ['User']
-        #swagger.description = 'Endpoint to sign in a specific user' */
+        #swagger.description = 'Endpoint to update in a specific user' */
     //params
     var id = req.body.id;
     var username = req.body.username;
@@ -189,7 +189,7 @@ var _default = {
   },
   deleteUser: function deleteUser(req, res) {
     /* 	#swagger.tags = ['User']
-        #swagger.description = 'Endpoint to sign in a specific user' */
+        #swagger.description = 'Endpoint to delete in a specific user' */
     //params
     var id = req.body.id;
 
