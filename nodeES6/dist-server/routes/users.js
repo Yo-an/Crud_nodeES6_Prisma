@@ -39,12 +39,12 @@ var _default = {
     /*#swagger.tags = ['User']
         #swagger.description = 'Endpoint to select one in user'*/
     //Params
-    const id = req.body.id;
+    const email = req.body.email;
 
     async function main() {
-      await prisma.users.findUnique({
+      await prisma.users.findFirst({
         where: {
-          id: Number(id)
+          email: email
         }
       }).then(User => {
         if (User != null) {
@@ -86,7 +86,7 @@ var _default = {
       if (username != null && password != null && email != null) {
         if (EMAIL_REGEX.test(email)) {
           if (PASSWORD_REGEX.test(password)) {
-            await prisma.users.findUnique({
+            await prisma.users.findFirst({
               where: {
                 email: email
               }

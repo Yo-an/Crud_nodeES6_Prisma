@@ -36,29 +36,27 @@ export default{
         #swagger.description = 'Endpoint to select one in user'*/
 
     //Params
-    const id = req.body.id;
-
-    async function main() {      
-      await prisma.users.findUnique({
-        where:{
-          id:Number(id),
-        }
-      })
-      .then((User)=>{
-        if(User!=null){
-          console.log(User);
-          res.status(201).json(User);
-        }
-        else{
-          console.log({'error':'Imposible de trouver cette utilisateur'});
-          res.status(409).json({'error':'Imposible de trouver cette utilisateur'});
-        }
-      })
-      .catch((err)=>{
-        console.log({'error':'Impossible de se connecter à la base de donnée!'});
-        res.status(500).json({'error':'Impossible de se connecter à la base de donnée!'});
-      })
-    }  
+    const email = req.body.email;
+    
+    async function main() {    
+        await prisma.users.findFirst({
+          where:{email:email},
+        })
+        .then((User)=>{
+          if(User!=null){
+            console.log(User);
+            res.status(201).json(User);
+          }
+          else{
+            console.log({'error':'Imposible de trouver cette utilisateur'});
+            res.status(409).json({'error':'Imposible de trouver cette utilisateur'});
+          }
+        })
+        .catch((err)=>{
+          console.log({'error':'Impossible de se connecter à la base de donnée!'});
+          res.status(500).json({'error':'Impossible de se connecter à la base de donnée!'});
+        })
+      } 
     main()
       .catch((e) => {
         throw e
@@ -81,7 +79,7 @@ export default{
       if(username!=null && password!=null && email!=null){
         if(EMAIL_REGEX.test(email)){ 
           if(PASSWORD_REGEX.test(password)){
-            await prisma.users.findUnique({
+            await prisma.users.findFirst({
               where:{email:email}
             })
             .then((userFound)=>{                             
