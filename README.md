@@ -35,4 +35,22 @@ npm install
 ````
 
 ### Les différents scrypt de démmarage
+````
+"scripts": {
+    "start": "npm run prod",
+    "server": "node ./dist-server/bin/www",
+    "watch:dev": "nodemon",
+    
+    "transpile": "babel ./server --out-dir dist-server",
+    "build": "npm-run-all clean transpile",
+    "clean": "rimraf dist-server",
+
+    "dev": "NODE_ENV=development npm-run-all build server",
+    "prod": "NODE_ENV=production npm-run-all build server",
+
+    "test": "jest",
+  
+    "start-gendoc": "node ./dist-server/swagger.js"
+  },
+ ````
 
