@@ -40,7 +40,7 @@ Prisma :
 npm install
 ````
 
-### Les scrypts de démarage :
+### Les scrypts de démarrage :
 ````
 "scripts": {
     "start": "npm run prod",
