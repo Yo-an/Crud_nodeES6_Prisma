@@ -77,10 +77,10 @@ Pour plus d'information sur la documentation Swagger et Swagger-autogen:
 
 #### Test Jest :
 - Demarrer les tests Jest :
+- Les tests se font pendant que le server est actif !
 ````
 npm run test
 ````
-- Les tests se font pendant que le server est actif !
 
 Pour plus d'information sur Jest et Frisby :
 - Jest : https://jestjs.io/docs/getting-started
