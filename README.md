@@ -29,7 +29,7 @@ Exemple :
 DATABASE_URL="mysql://root:randompassword@localhost:3306/mydb"
 ````
 
-Pour plus d'info voir le site web :
+Pour plus d'info voir la platform web :
 Prisma :
 - https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases/connect-your-database-node-mysql
 
