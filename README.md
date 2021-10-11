@@ -65,8 +65,8 @@ npm run watch:dev
 npm run start-gendoc
 ````
 Pour plus d'information sur la documentation Swagger :
-- https://github.com/davibaltar/swagger-autogen
-- https://swagger.io/docs/
+- Swagger-autogen : https://github.com/davibaltar/swagger-autogen
+- Swagger : https://swagger.io/docs/
 
 Demarrer les tests Jest :
 ````
