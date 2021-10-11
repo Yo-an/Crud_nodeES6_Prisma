@@ -18,7 +18,7 @@ Linux pop!_OS 21.04
 - Si vous voulez d'autre service de bdd :https://www.prisma.io/docs/
 
 ### 2. .Env :
-Aprés avoir pull ou télécharger le projet, configurer le `.env` à la base du projet,
+Aprés avoir pull ou télécharger le projet, créez et configurez le `.env` à la base du projet,
 mariadb ou Mysql, `initialisation identique.`
 
 De la forme :
