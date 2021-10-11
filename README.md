@@ -77,7 +77,7 @@ Pour plus d'information sur Jest et Frisby :
 - Jest : https://jestjs.io/docs/getting-started
 - Frisby : https://github.com/vlucas/frisby
 
-### Points de terminaison implémentés :
+### Points de terminaisons implémentés :
 
 #### /api/user
 Chemin | Méthode | Description
