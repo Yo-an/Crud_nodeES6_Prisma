@@ -10,8 +10,8 @@ export default{
         return res.status(201).json(allUsers);
       })
       .catch((err)=>{
-        console.log({'error':'Impossible de lister les utilisateurs'});
-        return res.status(500).json({'error':'Impossible de lister les utilisateurs'});
+        console.log({'error':'Impossible de lister les utilisateurs !'});
+        return res.status(500).json({'error':'Impossible de lister les utilisateurs !'});
       })
     }  
     main()

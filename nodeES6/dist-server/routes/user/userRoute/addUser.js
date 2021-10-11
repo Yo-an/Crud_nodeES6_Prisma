@@ -31,28 +31,28 @@ var _default = {
   addUser: function addUser(req, res, data) {
     if (data.username == null || data.password == null || data.email == null) {
       console.log({
-        'error': 'Paramètre manquant'
+        'error': 'Paramètre manquant !'
       });
       return res.status(400).json({
-        'error': 'Paramètre manquant'
+        'error': 'Paramètre manquant !'
       });
     }
 
     if (!EMAIL_REGEX.test(data.email)) {
       console.log({
-        'error': 'Cette email est invalide'
+        'error': 'Cet email est invalide !'
       });
       return res.status(400).json({
-        'error': 'Cette email est invalide'
+        'error': 'Cet email est invalide !'
       });
     }
 
     if (!PASSWORD_REGEX.test(data.password)) {
       console.log({
-        'error': 'Le mot de passe est incorrect il doit être compris entre 4 et 8 caractères et inclure 1 chiffre'
+        'error': 'Le mot de passe est incorrect il doit être compris entre 4 et 8 caractères et inclure 1 chiffre !'
       });
       return res.status(400).json({
-        'error': 'Le mot de passe est incorrect il doit être entre 4 et 8 caractère et inclure 1 chiffre'
+        'error': 'Le mot de passe est incorrect il doit être entre 4 et 8 caractère et inclure 1 chiffre !'
       });
     }
 
@@ -73,26 +73,26 @@ var _default = {
                       res.status(201).json(newUser);
                     })["catch"](function (err) {
                       console.log({
-                        'error': 'Imposible de sauvegarder cet utilisateur'
+                        'error': 'Imposible de sauvegarder cet utilisateur !'
                       });
                       res.status(500).json({
-                        'error': 'Imposible de sauvegarder cet utilisateur'
+                        'error': 'Imposible de sauvegarder cet utilisateur !'
                       });
                     });
                   } else {
                     console.log({
-                      'error': 'Cet utilasateur exist déja'
+                      'error': 'Cet utilisateur existe déja !'
                     });
                     res.status(409).json({
-                      'error': 'Cet utilisateur exist déja'
+                      'error': 'Cet utilisateur existe déja !'
                     });
                   }
                 })["catch"](function (err) {
                   console.log({
-                    'error': 'Imposible de vérifier cet utilisateur'
+                    'error': 'Imposible de vérifier cet utilisateur !'
                   });
                   res.status(500).json({
-                    'error': 'Imposible de vérifier cet utilisateur'
+                    'error': 'Imposible de vérifier cet utilisateur !'
                   });
                 });
 

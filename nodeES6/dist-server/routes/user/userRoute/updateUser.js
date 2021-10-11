@@ -48,10 +48,10 @@ var _default = {
                   res.status(201).json(updateUser);
                 })["catch"](function (err) {
                   console.log({
-                    'error': 'Impossible de modifier cet utilisateur'
+                    'error': 'Impossible de modifier cet utilisateur !'
                   });
                   res.status(500).json({
-                    'error': 'Impossible de modifier cet utilisateur'
+                    'error': 'Impossible de modifier cet utilisateur !'
                   });
                 });
 

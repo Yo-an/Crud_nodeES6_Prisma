@@ -40,10 +40,10 @@ var _default = {
                   return res.status(201).json(allUsers);
                 })["catch"](function (err) {
                   console.log({
-                    'error': 'Impossible de lister les utilisateurs'
+                    'error': 'Impossible de lister les utilisateurs !'
                   });
                   return res.status(500).json({
-                    'error': 'Impossible de lister les utilisateurs'
+                    'error': 'Impossible de lister les utilisateurs !'
                   });
                 });
 

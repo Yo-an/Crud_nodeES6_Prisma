@@ -16,8 +16,8 @@ export default {
         res.status(201).json(updateUser);
       })
       .catch((err)=>{
-        console.log({'error':'Impossible de modifier cet utilisateur'});
-        res.status(500).json({'error':'Impossible de modifier cet utilisateur'});
+        console.log({'error':'Impossible de modifier cet utilisateur !'});
+        res.status(500).json({'error':'Impossible de modifier cet utilisateur !'});
       })
     }
     main()

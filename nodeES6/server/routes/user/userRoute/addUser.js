@@ -9,16 +9,16 @@ export default {
   addUser: (req, res, data)=>{
     
     if(data.username==null || data.password==null || data.email==null){
-      console.log({'error':'Paramètre manquant'});
-      return res.status(400).json({'error':'Paramètre manquant'});
+      console.log({'error':'Paramètre manquant !'});
+      return res.status(400).json({'error':'Paramètre manquant !'});
     }
     if(!EMAIL_REGEX.test(data.email)){
-      console.log({'error':'Cette email est invalide'});
-      return res.status(400).json({'error':'Cette email est invalide'});
+      console.log({'error':'Cet email est invalide !'});
+      return res.status(400).json({'error':'Cet email est invalide !'});
     }
     if(!PASSWORD_REGEX.test(data.password)){
-      console.log({'error':'Le mot de passe est incorrect il doit être compris entre 4 et 8 caractères et inclure 1 chiffre'});
-      return res.status(400).json({'error':'Le mot de passe est incorrect il doit être entre 4 et 8 caractère et inclure 1 chiffre'});
+      console.log({'error':'Le mot de passe est incorrect il doit être compris entre 4 et 8 caractères et inclure 1 chiffre !'});
+      return res.status(400).json({'error':'Le mot de passe est incorrect il doit être entre 4 et 8 caractère et inclure 1 chiffre !'});
     }
 
     async function main(){
@@ -31,17 +31,17 @@ export default {
             res.status(201).json(newUser);
           })
           .catch((err)=>{
-            console.log({'error':'Imposible de sauvegarder cet utilisateur'});
-              res.status(500).json({'error':'Imposible de sauvegarder cet utilisateur'});
+            console.log({'error':'Imposible de sauvegarder cet utilisateur !'});
+              res.status(500).json({'error':'Imposible de sauvegarder cet utilisateur !'});
           })         
         }else{
-          console.log({'error':'Cet utilasateur exist déja'});
-          res.status(409).json({'error':'Cet utilisateur exist déja'});
+          console.log({'error':'Cet utilisateur existe déja !'});
+          res.status(409).json({'error':'Cet utilisateur existe déja !'});
         }       
       })
       .catch((err)=>{
-        console.log({'error':'Imposible de vérifier cet utilisateur'});
-        res.status(500).json({'error':'Imposible de vérifier cet utilisateur'});
+        console.log({'error':'Imposible de vérifier cet utilisateur !'});
+        res.status(500).json({'error':'Imposible de vérifier cet utilisateur !'});
       })   
     }
     main()

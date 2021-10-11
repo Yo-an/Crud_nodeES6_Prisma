@@ -37,17 +37,17 @@ var _default = {
               case 0:
                 _modelUser["default"]["delete"](id).then(function (userDelete) {
                   console.log({
-                    'Bien effacé ': userDelete
+                    'Cet utilisateur à bien été effacé !': userDelete
                   });
                   res.status(201).json({
-                    'Bien effacé ': userDelete
+                    'Cet utilisateur à bien été effacé !': userDelete
                   });
                 })["catch"](function (err) {
                   console.log({
-                    'error': 'Cet utilisateur ne peut pas être effacé'
+                    'error': 'Cet utilisateur ne peut pas être effacé !'
                   });
                   res.status(500).json({
-                    'error': 'Cet utilisateur ne peut pas être effacé'
+                    'error': 'Cet utilisateur ne peut pas être effacé !'
                   });
                 });
 
