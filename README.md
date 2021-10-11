@@ -12,9 +12,8 @@ Linux pop!_OS 21.04
 
 ## Installation :
 ### 1. Installer un service de base de données :
-- Ici j'ai utiliser un service SQL 
-Le paramétrage de mariadB ou mySql est identique :
-- Voir la configuration du ` .env`
+- Ici j'ai utiliser un service SQL .
+- Voir la configuration du ` .env` .
 
 ### 2. .Env :
 Aprés avoir pull le projet configurer le .env à la base du projet,
