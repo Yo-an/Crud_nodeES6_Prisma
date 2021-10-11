@@ -63,14 +63,19 @@ npm install
 ````
 npm run watch:dev
 ````
+
+#### La documentation :
 - Actualiser la documentation 
 ````
 npm run start-gendoc
 ````
+- La route de la documentation : `http://localhost:3000/doc`
+
 Pour plus d'information sur la documentation Swagger et Swagger-autogen:
 - Swagger-autogen : https://github.com/davibaltar/swagger-autogen
 - Swagger : https://swagger.io/docs/
 
+#### Test Jest
 Demarrer les tests Jest :
 ````
 npm run test
@@ -90,6 +95,11 @@ Chemin | Méthode | Description
 /api/user/put | PUT | Mise à jour d'un user
 /api/user/delete | DELETE | Supprime un user
 
+- Vous pouvez tester cette api avec la docummentaion : `http://localhost:3000/doc` 
+- Avec Posteman
+
+
 Merci de votre intérêt
+
 
 
