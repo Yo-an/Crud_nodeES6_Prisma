@@ -59,7 +59,7 @@ npm install
     "start-gendoc": "node ./dist-server/swagger.js"
   },
  ````
-- Démarrer le server avec la compilation automatique de babel
+- Démarrer le server avec la compilation automatique de babel et en mode "dev"
 ````
 npm run watch:dev
 ````
