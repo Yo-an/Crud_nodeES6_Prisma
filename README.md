@@ -64,19 +64,19 @@ npm install
 npm run watch:dev
 ````
 
-#### La documentation :
+#### Documentation :
 - Actualiser la documentation 
 ````
 npm run start-gendoc
 ````
-- La route de la documentation : `http://localhost:3000/doc`
+- Route de la documentation : `http://localhost:3000/doc`
 
 Pour plus d'information sur la documentation Swagger et Swagger-autogen:
 - Swagger-autogen : https://github.com/davibaltar/swagger-autogen
 - Swagger : https://swagger.io/docs/
 
-#### Test Jest
-Demarrer les tests Jest :
+#### Test Jest :
+- Demarrer les tests Jest :
 ````
 npm run test
 ````
