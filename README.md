@@ -65,13 +65,13 @@ Pour plus d'information sur la documentation :
 - https://github.com/davibaltar/swagger-autogen
 - https://swagger.io/docs/
 
-- Demarrer les test Jest
+Demarrer les test Jest
 ````
 npm run test
 ````
 Pour plus d'information sur Jest et Frisby :
-Jest : https://jestjs.io/docs/getting-started
-Frisby : https://github.com/vlucas/frisby
+- Jest : https://jestjs.io/docs/getting-started
+- Frisby : https://github.com/vlucas/frisby
 
 
 
