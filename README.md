@@ -11,10 +11,14 @@ Linux pop!_OS 21.04
 - Swagger (documentation automatique)
 
 ## Installation :
-### 1. Installer mySQL ou mariadb
-### 2. Env.
+### 1. Installer un service de base de données :
+- Ici j'ai utiliser un service SQL 
+Le paramétrage de mariadB ou mySql est identique :
+- Voir la configuration du ` .env`
+
+### 2. .Env :
 Aprés avoir pull le projet configurer le .env à la base du projet,
-mariadb ou Mysql, initialisation identique.
+mariadb ou Mysql, `initialisation identique.`
 
 De la forme :
 ````
