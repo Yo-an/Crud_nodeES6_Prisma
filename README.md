@@ -65,7 +65,7 @@ npm run watch:dev
 ````
 
 #### Documentation :
-- Actualiser la documentation (actualiser pour tout changement dans la doc)
+- Actualiser la documentation (actualisez pour tout changement dans la doc)
 ````
 npm run start-gendoc
 ````
@@ -77,7 +77,7 @@ Pour plus d'information sur la documentation Swagger et Swagger-autogen:
 
 #### Test Jest :
 - Demarrer les tests Jest :
-- Les tests se font pendant que le server est actif !(dupliquer les consoles)
+- Les tests se font pendant que le server est actif ! (dupliquez les consoles)
 ````
 npm run test
 ````
