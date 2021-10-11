@@ -15,6 +15,9 @@ Linux pop!_OS 21.04
 - Ici j'ai utiliser un service SQL .
 - Voir la configuration du ` .env` .
 
+- Si vous voulez d'autre service :
+- https://www.prisma.io/docs/
+
 ### 2. .Env :
 Aprés avoir pull le projet configurer le .env à la base du projet,
 mariadb ou Mysql, `initialisation identique.`
