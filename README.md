@@ -1,5 +1,8 @@
 # Crud_nodeES6_Prisma
-Petite API nodejs en Es6 avec Prisma
+Petite API nodejs en Es6 avec Prisma et l'infrastructure Express
+
+- Os :
+Linux pop!_OS 21.04 
 
 ## Service utilsés :
 - Babel (Compilateur)
@@ -26,4 +29,10 @@ DATABASE_URL="mysql://root:randompassword@localhost:3306/mydb"
 Pour plus d'info voir le site web :
 https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases/connect-your-database-node-mysql
 
+### 3. Installation des dépendances 
+````
+npm install
+````
+
+### Les différents scrypt de démmarage
 
