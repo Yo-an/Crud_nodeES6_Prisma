@@ -29,12 +29,12 @@ DATABASE_URL="mysql://root:randompassword@localhost:3306/mydb"
 Pour plus d'info voir le site web :
 https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases/connect-your-database-node-mysql
 
-### 3. Installation des dépendances 
+### 3. Installation des dépendances :
 ````
 npm install
 ````
 
-### Les différents scrypt de démarage
+### Les scrypts de démarage :
 ````
 "scripts": {
     "start": "npm run prod",
@@ -61,11 +61,11 @@ npm run watch:dev
 ````
 npm run start-gendoc
 ````
-Pour plus d'information sur la documentation :
+Pour plus d'information sur la documentation Swagger :
 - https://github.com/davibaltar/swagger-autogen
 - https://swagger.io/docs/
 
-Demarrer les test Jest
+Demarrer les tests Jest :
 ````
 npm run test
 ````
@@ -73,5 +73,17 @@ Pour plus d'information sur Jest et Frisby :
 - Jest : https://jestjs.io/docs/getting-started
 - Frisby : https://github.com/vlucas/frisby
 
+### Points de terminaison implémentés :
+
+#### /api/user
+Chemin | Méthode | Description
+---|---|---
+/api/user/post | POST | Ajoute un user
+/api/user/get | POST | Selectionne un user
+/api/user/list | GET | Liste tout les users
+/api/user/put | PUT | Mise à jour d'un user
+/api/user/delete | DELETE | Supprime un user
+
+Merci de votre intérêt
 
 
