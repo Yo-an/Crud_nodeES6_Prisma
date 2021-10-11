@@ -6,8 +6,8 @@ export default {
     async function main(){ 
       modelUser.delete(id)
       .then((userDelete)=>{
-        console.log({'bien effacer ':userDelete});
-        res.status(201).json({'bien effacer ': userDelete});
+        console.log({'Bien effacé ':userDelete});
+        res.status(201).json({'Bien effacé ': userDelete});
       })
       .catch((err)=>{
         console.log({'error':'Cet utilisateur ne peut pas être effacé'});

@@ -31,10 +31,10 @@ var _default = {
   addUser: function addUser(req, res, data) {
     if (data.username == null || data.password == null || data.email == null) {
       console.log({
-        'error': 'paramètre manquant'
+        'error': 'Paramètre manquant'
       });
       return res.status(400).json({
-        'error': 'paramètre manquant'
+        'error': 'Paramètre manquant'
       });
     }
 

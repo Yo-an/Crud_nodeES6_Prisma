@@ -9,8 +9,8 @@ export default {
   addUser: (req, res, data)=>{
     
     if(data.username==null || data.password==null || data.email==null){
-      console.log({'error':'paramètre manquant'});
-      return res.status(400).json({'error':'paramètre manquant'});
+      console.log({'error':'Paramètre manquant'});
+      return res.status(400).json({'error':'Paramètre manquant'});
     }
     if(!EMAIL_REGEX.test(data.email)){
       console.log({'error':'Cette email est invalide'});

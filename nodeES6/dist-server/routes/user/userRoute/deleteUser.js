@@ -37,10 +37,10 @@ var _default = {
               case 0:
                 _modelUser["default"]["delete"](id).then(function (userDelete) {
                   console.log({
-                    'bien effacer ': userDelete
+                    'Bien effacé ': userDelete
                   });
                   res.status(201).json({
-                    'bien effacer ': userDelete
+                    'Bien effacé ': userDelete
                   });
                 })["catch"](function (err) {
                   console.log({

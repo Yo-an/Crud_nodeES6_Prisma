@@ -9,7 +9,6 @@ export default {
             tempData[index]=(data[index]);
         }
     }
-
     async function main(){
       modelUser.update(id,tempData)
       .then((updateUser)=>{
