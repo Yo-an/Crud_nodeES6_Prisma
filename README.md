@@ -77,7 +77,7 @@ Pour plus d'information sur la documentation Swagger et Swagger-autogen:
 
 #### Test Jest :
 - Demarrer les tests Jest :
-- Les tests se font pendant que le server est actif !
+- Les tests se font pendant que le server est actif !(dupliquer les consoles)
 ````
 npm run test
 ````
