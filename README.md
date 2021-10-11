@@ -34,7 +34,7 @@ https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relat
 npm install
 ````
 
-### Les différents scrypt de démmarage
+### Les différents scrypt de démarage
 ````
 "scripts": {
     "start": "npm run prod",
@@ -53,4 +53,25 @@ npm install
     "start-gendoc": "node ./dist-server/swagger.js"
   },
  ````
+- Démarrer le server avec la compilation automatique de babel
+````
+npm run watch:dev
+````
+- Actualiser la documentation 
+````
+npm run start-gendoc
+````
+Pour plus d'information sur la documentation :
+- https://github.com/davibaltar/swagger-autogen
+- https://swagger.io/docs/
+
+- Demarrer les test Jest
+````
+npm run test
+````
+Pour plus d'information sur Jest et Frisby :
+Jest : https://jestjs.io/docs/getting-started
+Frisby : https://github.com/vlucas/frisby
+
+
 
