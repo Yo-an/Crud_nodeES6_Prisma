@@ -1,6 +1,6 @@
 import modelUser from '../modelUser';
 
-// password compris entre 4 et 8 caractére et inclure 1 chiffre
+// password compris entre 4 et 8 caractères et inclure 1 chiffre
 const PASSWORD_REGEX = /^(?=.*\d).{4,8}$/;
 // email valide
 const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
