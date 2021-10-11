@@ -65,7 +65,7 @@ npm run watch:dev
 ````
 
 #### Documentation :
-- Actualiser la documentation 
+- Actualiser la documentation (actualiser pour tout changement dans la doc)
 ````
 npm run start-gendoc
 ````
@@ -80,6 +80,8 @@ Pour plus d'information sur la documentation Swagger et Swagger-autogen:
 ````
 npm run test
 ````
+- Les tests se font pendant que le server est actif !
+
 Pour plus d'information sur Jest et Frisby :
 - Jest : https://jestjs.io/docs/getting-started
 - Frisby : https://github.com/vlucas/frisby
