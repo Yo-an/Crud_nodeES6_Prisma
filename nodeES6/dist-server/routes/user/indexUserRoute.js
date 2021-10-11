@@ -22,7 +22,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var _default = {
   addUser: function addUser(req, res) {
     /* 	#swagger.tags = ['User']
-    #swagger.description = 'Endpoint to add in user' */
+    #swagger.description = 'Ajouter un user !' */
     //Params
     var username = req.body.username;
     var password = req.body.password;
@@ -37,7 +37,7 @@ var _default = {
   },
   deleteUser: function deleteUser(req, res) {
     /* 	#swagger.tags = ['User']
-    #swagger.description = 'Endpoint to delete in a specific user' */
+    #swagger.description = 'Supprimer un user par son id !' */
     //params
     var id = req.body.id;
 
@@ -45,7 +45,7 @@ var _default = {
   },
   updateUser: function updateUser(req, res) {
     /* 	#swagger.tags = ['User']
-    #swagger.description = 'Endpoint to update in a specific user' */
+    #swagger.description = 'Mettre à jour un user par son id !' */
     //params
     var id = req.body.id;
     var username = req.body.username;
@@ -61,7 +61,7 @@ var _default = {
   },
   getUser: function getUser(req, res) {
     /*#swagger.tags = ['User']
-    #swagger.description = 'Endpoint to select one in user'*/
+    #swagger.description = 'Selectionner un user par son email !'*/
     //Params
     var email = req.body.email;
 
@@ -69,7 +69,7 @@ var _default = {
   },
   listUser: function listUser(req, res) {
     /* #swagger.tags = ['User']
-    #swagger.description = 'Endpoint qui fait la liste de tout les users' */
+    #swagger.description = 'Lister tout les users !' */
     _listUser2["default"].listUser(req, res);
   }
 };

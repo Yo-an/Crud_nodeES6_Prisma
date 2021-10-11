@@ -7,7 +7,7 @@ import listUser from "./userRoute/listUser";
 export default{
     addUser:(req,res)=>{
         /* 	#swagger.tags = ['User']
-        #swagger.description = 'Endpoint to add in user' */
+        #swagger.description = 'Ajouter un user !' */
 
         //Params
         const username = req.body.username;
@@ -19,7 +19,7 @@ export default{
     },
     deleteUser:(req,res)=>{
         /* 	#swagger.tags = ['User']
-        #swagger.description = 'Endpoint to delete in a specific user' */
+        #swagger.description = 'Supprimer un user par son id !' */
         
         //params
         const id = req.body.id;
@@ -28,7 +28,7 @@ export default{
     },
     updateUser:(req,res)=>{
         /* 	#swagger.tags = ['User']
-        #swagger.description = 'Endpoint to update in a specific user' */
+        #swagger.description = 'Mettre à jour un user par son id !' */
 
         //params
         const id       = req.body.id;
@@ -41,7 +41,7 @@ export default{
     },
     getUser:(req,res)=>{
         /*#swagger.tags = ['User']
-        #swagger.description = 'Endpoint to select one in user'*/
+        #swagger.description = 'Selectionner un user par son email !'*/
 
         //Params
         const email = req.body.email;
@@ -50,7 +50,7 @@ export default{
     },
     listUser:(req,res)=>{
         /* #swagger.tags = ['User']
-        #swagger.description = 'Endpoint qui fait la liste de tout les users' */
+        #swagger.description = 'Lister tout les users !' */
 
         listUser.listUser(req,res)
     }

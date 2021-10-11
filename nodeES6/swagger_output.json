@@ -19,7 +19,7 @@
         "tags": [
           "User"
         ],
-        "description": "Endpoint qui fait la liste de tout les users",
+        "description": "Lister tout les users !",
         "parameters": [],
         "responses": {}
       }
@@ -29,7 +29,7 @@
         "tags": [
           "User"
         ],
-        "description": "Endpoint to select one in user",
+        "description": "Selectionner un user par son email !",
         "parameters": [
           {
             "name": "obj",
@@ -52,7 +52,7 @@
         "tags": [
           "User"
         ],
-        "description": "Endpoint to add in user",
+        "description": "Ajouter un user !",
         "parameters": [
           {
             "name": "obj",
@@ -81,7 +81,7 @@
         "tags": [
           "User"
         ],
-        "description": "Endpoint to update in a specific user",
+        "description": "Mettre à jour un user par son id !",
         "parameters": [
           {
             "name": "obj",
@@ -113,7 +113,7 @@
         "tags": [
           "User"
         ],
-        "description": "Endpoint to delete in a specific user",
+        "description": "Supprimer un user par son id !",
         "parameters": [
           {
             "name": "obj",
