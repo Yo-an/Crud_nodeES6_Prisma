@@ -1,8 +1,10 @@
+/*
+    Test des différentes routes des Users
+*/
 import frisby from "frisby";
-const Joi = frisby.Joi; // Frisby exposes Joi for convenience
-
+const Joi = frisby.Joi; 
 /*-- 
-  Construction de l'object comprenant les variable 
+  Construction de l'object comprenant les variables 
   demandé dans les différentes requettes
 ---*/
 const user = Joi.object({
@@ -19,16 +21,14 @@ function getRandomInt(max) {
 }
 const userCreate ={
     username:"Josh",
-    email:"josh"+getRandomInt(1000)+"@gmail.com",
+    email:"josh"+getRandomInt(100)+"@gmail.com",
     password:"blabla5"
   }
 let UserId;
 
-// Test de l'ensemble des routes de /api/user
-describe("/user routes",()=>{
-   // Test de l'ajout d'un user /api/user/post
-   describe("test sur la route d'ajout de création de user",()=>{
-    it("ajoute 1 user",()=>{
+describe("Test de l'ensemble des routes /api/user",()=>{
+   describe("Test de la route de création de user /api/user/post",()=>{
+    it("Ajoute 1 user",()=>{
       return frisby
       .post("http://localhost:3000/api/user/post/",{
         username:userCreate.username,
@@ -38,18 +38,16 @@ describe("/user routes",()=>{
       .expect("status",201)
     })
   })
-  // Test de la récupération de la list de users /api/user/list 
-  describe("liste des users",()=>{
-    it("retourne et valide la user list",()=>{
+  describe("Test de la route qui liste les users /api/user/list",()=>{
+    it("Retourne et valide la liste des users",()=>{
       return frisby
         .get("http://localhost:3000/api/user/list")
         .expect("status",201)
         .expect("jsonTypesStrict","*",user);
     });
   });
-  // Test de la récupération de un user /api/user/get
-  describe("selection de 1 user",()=>{
-    it("selection de 1 user",()=>{
+  describe("Test de la route qui récupére un user /api/user/get",()=>{
+    it("Selection de 1 user avec son email",()=>{
       return frisby
         .post("http://localhost:3000/api/user/get/",{
           email:userCreate.email,
@@ -60,20 +58,19 @@ describe("/user routes",()=>{
         })   
     });
   });
-  // Test de la mise à jour d'un user api/user/put
-  describe("mise a jour de 1 user",()=>{
-    it("mise a jour de 1 user",()=>{
+  describe("Test de la route de mise a jour de 1 user /api/user/put",()=>{
+    it("Mise a jour de 1 user",()=>{
       return frisby
         .put('http://localhost:3000/api/user/put/',{
           id:UserId,
-          username:"boby"
+          username:"boby",
+          password:"hrtys14"
         }) 
         .expect("status",201)
     });
   });
-  // Test de la suppression d'un user /api/user/delete
-  describe("suppression de 1 user",()=>{
-    it("suppression de 1 user",()=>{
+  describe("Test de la route de suppression de 1 user /api/user/delete",()=>{
+    it("Suppression de 1 user",()=>{
       return frisby
         .del('http://localhost:3000/api/user/delete/',{
           id:UserId

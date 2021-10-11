@@ -1,13 +1,8 @@
 import modelUser from '../modelUser';
 
 export default {
-deleteUser:(req,res)=>{
-    /* 	#swagger.tags = ['User']
-        #swagger.description = 'Endpoint to delete in a specific user' */
-        
-    //params
-    const id = req.body.id;
-
+  deleteUser:(req,res,id)=>{
+    
     async function main(){ 
       modelUser.delete(id)
       .then((userDelete)=>{
@@ -15,8 +10,8 @@ deleteUser:(req,res)=>{
         res.status(201).json({'bien effacer ': userDelete});
       })
       .catch((err)=>{
-        console.log({'error':'Cette utilisateur ne peu pas être effacé'});
-        res.status(500).json({'error':'Cette utilisateur ne peu pas être effacé'});
+        console.log({'error':'Cet utilisateur ne peut pas être effacé'});
+        res.status(500).json({'error':'Cet utilisateur ne peut pas être effacé'});
       })
     }
     main()
@@ -25,6 +20,6 @@ deleteUser:(req,res)=>{
       })
       .finally(async () => {
         modelUser.closePrisma;
-      })
-    }
+    })
+  }
 }

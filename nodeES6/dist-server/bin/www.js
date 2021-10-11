@@ -5,28 +5,30 @@
  */
 "use strict";
 
+require("core-js/modules/es.parse-int.js");
+
 var _app = _interopRequireDefault(require("../app"));
 
 var _debug = _interopRequireDefault(require("debug"));
 
 var _http = _interopRequireDefault(require("http"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-const debug = (0, _debug.default)('nodees6:server');
+var debug = (0, _debug["default"])('nodees6:server');
 /**
  * Get port from environment and store in Express.
  */
 
 var port = normalizePort(process.env.PORT || '3000');
 
-_app.default.set('port', port);
+_app["default"].set('port', port);
 /**
  * Create HTTP server.
  */
 
 
-var server = _http.default.createServer(_app.default);
+var server = _http["default"].createServer(_app["default"]);
 /**
  * Listen on provided port, on all network interfaces.
  */

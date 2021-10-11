@@ -5,14 +5,18 @@
   "scripts": {
     "start": "npm run prod",
     "server": "node ./dist-server/bin/www",
+
     "transpile": "babel ./server --out-dir dist-server",
+    "build": "npm-run-all clean transpile",
     "clean": "rimraf dist-server",
+
     "dev": "NODE_ENV=development npm-run-all build server",
     "prod": "NODE_ENV=production npm-run-all build server",
+
     "watch:dev": "nodemon",
+
     "test": "jest",
-    "test-watch":"jest --collect-coverage",
-    "build": "npm-run-all clean transpile",
+  
     "start-gendoc": "node ./dist-server/swagger.js"
   },
   "dependencies": {
@@ -36,11 +40,6 @@
       [
         "@babel/preset-env",
         {
-          "targets": {
-            "browsers": [
-              "last 2 chrome versions"
-            ]
-          },
           "useBuiltIns": "usage",
           "corejs": "3"
         }

@@ -19,13 +19,9 @@
         "tags": [
           "User"
         ],
-        "description": "Endpoint to list in user",
+        "description": "Endpoint qui fait la liste de tout les users",
         "parameters": [],
-        "responses": {
-          "201": {
-            "description": "Created"
-          }
-        }
+        "responses": {}
       }
     },
     "/api/user/get/": {
@@ -41,18 +37,14 @@
             "schema": {
               "type": "object",
               "properties": {
-                "id": {
+                "email": {
                   "example": "any"
                 }
               }
             }
           }
         ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          }
-        }
+        "responses": {}
       }
     },
     "/api/user/post/": {
@@ -81,20 +73,7 @@
             }
           }
         ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "409": {
-            "description": "Conflict"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
+        "responses": {}
       }
     },
     "/api/user/put/": {
@@ -126,11 +105,7 @@
             }
           }
         ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          }
-        }
+        "responses": {}
       }
     },
     "/api/user/delete/": {
@@ -153,11 +128,7 @@
             }
           }
         ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          }
-        }
+        "responses": {}
       }
     }
   },

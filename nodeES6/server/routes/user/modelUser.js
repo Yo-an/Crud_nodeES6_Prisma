@@ -3,8 +3,7 @@ const prisma = new PrismaClient();
 
 export default {
     getAll:async()=>{
-       return await prisma.users.findMany();
-         
+       return await prisma.users.findMany();   
     },
     getOne:async(email)=>{
         return await prisma.users.findUnique({
@@ -29,6 +28,5 @@ export default {
     },
     closePrisma:async()=>{
         return await prisma.$disconnect()
-    }
-    
+    }   
 }
