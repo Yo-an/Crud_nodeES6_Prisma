@@ -12,10 +12,10 @@ Linux pop!_OS 21.04
 
 ## Installation :
 ### 1. Installer un service de base de données :
-- Ici j'ai utiliser un service SQL .
+- Ici j'ai utilisé un service SQL .
 - Voir la configuration du ` .env` .
 
-- Si vous voulez d'autre service de bdd :https://www.prisma.io/docs/
+- Si vous voulez d'autre services de bdd :https://www.prisma.io/docs/
 
 ### 2. .Env :
 Aprés avoir pull ou télécharger le projet, créez et configurez le `.env` à la base de celui-ci :
