@@ -18,7 +18,7 @@ Linux pop!_OS 21.04
 - Si vous voulez d'autre services de bdd :https://www.prisma.io/docs/
 
 ### 2. .Env :
-Aprés avoir pull ou télécharger le projet, créez et configurez le `.env` à la base de celui-ci :
+Aprés avoir pull ou téléchargé le projet, créez et configurez le `.env` à la base de celui-ci :
 - mariadb ou Mysql, `initialisation identique.`
 
 De la forme :
@@ -59,30 +59,30 @@ npm install
     "start-gendoc": "node ./dist-server/swagger.js"
   },
  ````
-- Démarrer le server avec la compilation automatique de babel et en mode "dev"
+- Pour démarrer le server avec la compilation automatique de babel et en mode "dev"
 ````
 npm run watch:dev
 ````
 
 #### Documentation :
-- Actualiser la documentation (actualisez pour tout changement dans la doc)
+- Pour actualiser la documentation (actualisez pour tout changement dans la doc)
 ````
 npm run start-gendoc
 ````
 - Route de la documentation : `http://localhost:3000/doc`
 
-Pour plus d'information sur la documentation Swagger et Swagger-autogen:
+Pour plus d'informations sur la documentation Swagger et Swagger-autogen:
 - Swagger-autogen : https://github.com/davibaltar/swagger-autogen
 - Swagger : https://swagger.io/docs/
 
 #### Test Jest :
-- Demarrer les tests Jest :
+- Pour demarrer les tests Jest :
 - Les tests se font pendant que le server est actif ! (dupliquez les consoles)
 ````
 npm run test
 ````
 
-Pour plus d'information sur Jest et Frisby :
+Pour plus d'informations sur Jest et Frisby :
 - Jest : https://jestjs.io/docs/getting-started
 - Frisby : https://github.com/vlucas/frisby
 
