@@ -98,7 +98,7 @@ Chemin | Méthode | Description
 /api/user/delete | DELETE | Supprime un user
 
 - Vous pouvez tester cette api avec la docummentaion : `http://localhost:3000/doc` 
-- Avec Posteman
+- Avec Postman
 
 
 Merci de votre intérêt
